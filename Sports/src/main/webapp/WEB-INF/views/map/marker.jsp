@@ -16,7 +16,7 @@
 		// map 생성
 		// Tmap.map을 이용하여, 지도가 들어갈 div, 넓이, 높이를 설정합니다.
 		map = new Tmapv2.Map("map_div", {
-			center : new Tmapv2.LatLng(37.566481622437934, 126.98502302169841), // 지도 초기 좌표
+			center : new Tmapv2.LatLng(35.166023, 126.857315), // 지도 초기 좌표
 			width : "100%", // map의 width 설정
 			height : "400px" // map의 height 설정	
 
@@ -24,25 +24,9 @@
 
 		var positions = [//다중 마커 저장 배열
 			{
- 				title: 'SKT타워', 
- 				lonlat: new Tmapv2.LatLng(37.566369,126.984895)//좌표 지정
- 			},
- 			{
- 				title: '호텔', 
- 				lonlat: new Tmapv2.LatLng(37.564432,126.979979)
- 			},
- 			{
- 				title: '명동성당', 
- 				lonlat: new Tmapv2.LatLng(37.5632423,126.987210)
- 			},
- 			{
- 				title: '을지로3가역',
- 				lonlat: new Tmapv2.LatLng(37.566337,126.992703)
- 			},
- 			{
-	     		title: '덕수궁',
-	     		lonlat: new Tmapv2.LatLng(37.565861,126.975194)
-	     	}
+ 				title: '${VLIST.v_name}', 
+ 				lonlat: new Tmapv2.LatLng(${VLIST.v_lgt},${VLIST.v_lat})//좌표 지정
+ 			}
 		];
 		 
 		for (var i = 0; i< positions.length; i++){//for문을 통하여 배열 안에 있는 값을 마커 생성
