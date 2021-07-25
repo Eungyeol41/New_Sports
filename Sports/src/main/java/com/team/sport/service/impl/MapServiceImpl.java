@@ -12,8 +12,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Service("mapServiceV1")
-public class MapServiceImpl implements MapService{
-	
+public class MapServiceImpl implements MapService {
+
 	protected final MapDao mapDao;
 
 	@Override
@@ -21,5 +21,6 @@ public class MapServiceImpl implements MapService{
 		// TODO view_상세페이지 전체 선택
 		return mapDao.selectAll();
 	}
+
 
 }

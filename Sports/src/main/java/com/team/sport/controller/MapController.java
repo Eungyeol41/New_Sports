@@ -11,7 +11,9 @@ import com.team.sport.model.DetailPageDTO;
 import com.team.sport.service.MapService;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @Controller
 @RequiredArgsConstructor
 @RequestMapping(value = "/map")
@@ -33,6 +35,7 @@ public class MapController {
 	public String map_marker(Model model) {
 		
 		List<DetailPageDTO> vList = mapService.selectAll();
+		log.debug("Controller - VLIST : {}", vList.toString());
 		
 		model.addAttribute("VLIST", vList);
 		
