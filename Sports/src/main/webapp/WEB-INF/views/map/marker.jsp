@@ -26,9 +26,9 @@
 			
 			for(int j = 0; j < 104; j++) {
 				{
-	 				title: 'v_name', 
-	 				lonlat: new Tmapv2.LatLng(${VLIST.v_lgt}, ${VLIST.v_lat})//좌표 지정
-	 			}	
+	 				title: '${VLIST[j].v_name}', 
+	 				lonlat: new Tmapv2.LatLng(${VLIST[j].v_lgt}, ${VLIST[j].v_lat})//좌표 지정
+	 			}
 			}
 		];
 		 
