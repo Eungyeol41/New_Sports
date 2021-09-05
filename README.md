@@ -25,12 +25,12 @@
   - git add .
   - git commit -m "Comment"
   - git push --set-upstream origin 'branch 이름'
-  -   .. 또는 git push -u origin 'branch 이름'
+    > 또는 git push -u origin 'branch 이름'
   - 한 번 -u로 주소를 세팅해놓게 되면
   - 다음부터는 git push origin 'branch 이름'으로 push를 해도 상관이 없다
 ### Pull 하기
   - git pull 'Repository 주소' main
-  -   .. 또는 git pull origin main ( -> origin에 Repository 주소가 저장되어 있다.. )
+    > 또는 git pull origin main ( -> origin에 Repository 주소가 저장되어 있다.. )
   - 한 번 위의 코드를 실행해놓으면
-  -   .. 다음부터는 git pull로 해도 상관이 없다.
+    > 다음부터는 git pull로 해도 상관이 없다.
 
