@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background: skyblue;
+    padding: 0.3rem;
+}
+
+nav {
+    background: lightgrey;
+    color: white;
+    padding: 0.2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+
+}
+
+nav li.login {
+    margin-left: auto;
+}
+
+div.banner {
+    border: 1px solid #ddd;
+    width: 80%;
+    padding: 5rem 0;
+    text-align: center;
+    margin: 0 auto;
+}
