@@ -6,12 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- CSS 파일 -->
     <link href="${rootPath}/static/css/main.css?ver=004" rel="stylesheet">
 
     <!-- 이거를 해줘야 js 파일에서 rootPath를 인식..? -->
     <script>
-        var rootPath = "${rootPath}";
+        const rootPath = "${rootPath}"
     </script>
     <script src="${rootPath}/static/js/main_nav.js"></script>
     <title>Main</title>
@@ -35,9 +36,9 @@
     <label>배너를 보여줄 곳</label>
 </div>
 <div class="btn_box">
-    <div class="btn_1">검색</div>
-    <div class="btn_2">지도</div>
-    <div class="btn_3">커뮤니티</div>
+    <div class="btn_search">검색</div>
+    <div class="btn_map">지도</div>
+    <div class="btn_community">커뮤니티</div>
 </div>
 </body>
 </html>
