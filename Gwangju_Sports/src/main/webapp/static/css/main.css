@@ -8,13 +8,14 @@ header {
     text-align: center;
     color: white;
     background: skyblue;
-    padding: 0.3rem;
+    padding: 1.5rem;
 }
 
 nav {
     background: lightgrey;
     color: white;
     padding: 0.2rem;
+    margin-bottom: 2rem;
 }
 
 nav ul {
@@ -23,11 +24,16 @@ nav ul {
 }
 
 nav li {
-
+    margin: 0 1rem;
+    padding: 0.3rem;
 }
 
 nav li.login {
     margin-left: auto;
+}
+
+nav li:hover {
+    cursor: pointer;
 }
 
 div.banner {
@@ -35,5 +41,19 @@ div.banner {
     width: 80%;
     padding: 5rem 0;
     text-align: center;
+    margin: 0 auto;
+}
+
+div.btn_box {
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    margin-top: 5rem;
+}
+
+div.btn_box div {
+    border: 1px solid #ddd;
+    height: 30vh;
+    width: 30%;
     margin: 0 auto;
 }
