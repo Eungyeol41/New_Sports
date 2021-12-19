@@ -9,8 +9,10 @@
     <!-- CSS 파일 -->
     <link href="${rootPath}/static/css/main.css?ver=004" rel="stylesheet">
 
-    <!-- JS 파일 -->
-    <script>var rootPath = "${rootPath}";</script>
+    <!-- 이거를 해줘야 js 파일에서 rootPath를 인식..? -->
+    <script>
+        var rootPath = "${rootPath}";
+    </script>
     <script src="${rootPath}/static/js/main_nav.js"></script>
     <title>Main</title>
 </head>
@@ -33,9 +35,9 @@
     <label>배너를 보여줄 곳</label>
 </div>
 <div class="btn_box">
-    <div class="btn_1"></div>
-    <div class="btn_2"></div>
-    <div class="btn_3"></div>
+    <div class="btn_1">검색</div>
+    <div class="btn_2">지도</div>
+    <div class="btn_3">커뮤니티</div>
 </div>
 </body>
 </html>
