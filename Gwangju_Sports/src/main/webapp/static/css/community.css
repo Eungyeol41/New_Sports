@@ -45,3 +45,24 @@ form.community_insert {
     width: 80%;
     margin: 0 auto;
 }
+
+form.community_insert label, form.community_insert input {
+    margin: 1rem;
+}
+
+form.community_insert label {
+    width: 15%;
+    text-align: right;
+}
+
+form.community_insert input {
+    width: 70%;
+}
+
+button.btn_save {
+    display: block;
+    margin-left: auto;
+    width: 25%;
+    border: none;
+    padding: 0.5rem;
+}
