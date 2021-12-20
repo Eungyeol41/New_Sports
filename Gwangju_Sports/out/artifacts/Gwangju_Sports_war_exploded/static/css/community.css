@@ -1,3 +1,4 @@
+/* main */
 h2 {
     width: 80%;
     margin: 0 auto;
@@ -27,4 +28,20 @@ table.community th {
 table.community td {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
+}
+
+div.btn_insert {
+    width: 80%;
+    margin: 0 auto;
+}
+
+div.btn_insert button {
+    display: block;
+    margin-left: auto;
+}
+
+/* insert */
+form.community_insert {
+    width: 80%;
+    margin: 0 auto;
 }

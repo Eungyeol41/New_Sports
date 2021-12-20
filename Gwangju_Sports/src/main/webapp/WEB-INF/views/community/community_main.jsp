@@ -4,7 +4,7 @@
 <html>
 <head>
     <!-- CSS 파일 -->
-    <link href="${rootPath}/static/css/community_main.css?ver=001" rel="stylesheet">
+    <link href="${rootPath}/static/css/community.css?ver=002" rel="stylesheet">
 
     <title>커뮤니티 - 게시글 목록</title>
 </head>
@@ -38,5 +38,16 @@
     </tr>
     </tbody>
 </table>
+<div class="btn_insert">
+    <button class="btn_insert">글쓰기</button>
+</div>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", ()=>{
+        const btn_insert = document.querySelector("button.btn_insert")
+        btn_insert.addEventListener("click", (e)=>{
+            location.href = "${rootPath}/community/insert"
+        })
+    })
+</script>
 </html>
