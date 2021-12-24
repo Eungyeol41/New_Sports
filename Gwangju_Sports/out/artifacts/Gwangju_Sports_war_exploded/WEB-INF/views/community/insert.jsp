@@ -24,7 +24,7 @@
     <div><label>제목</label><input name="c_title"></div>
     <%-- <textarea name="c_content"></textarea> --%>
     <%-- summernote 추가하기 --%>
-    <div id="summernote" name="c_content" />
+    <div id="summernote" name="c_content"></div>
     <div class="btn_save">
         <button class="btn_save" type="button">저장</button>
     </div>
@@ -34,18 +34,10 @@
     $(document).ready(function () {
         $('#summernote').summernote();
     })
-    /*
-    $("#c_content").summernote({
-        lang: "ko-KR",
-        placeholder: "내용을 입력해주세요",
-        width: "60%",
-        height: "300px",
-    })
-    */
 
     document.addEventListener("DOMContentLoaded", () => {
         const btn_save = document.querySelector("button.btn_save")
-        btn_save.addEventListener("click", (e) => {
+        btn_save.addEventListener("click", () => {
             form.submit()
         })
     })
