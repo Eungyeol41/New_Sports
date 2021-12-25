@@ -20,11 +20,11 @@
 <body>
 <form class="community_insert" method="post">
     <div><label>작성자</label><input name="c_name"></div>
-    <div><label>작성일자</label><input name="c_date"></div>
+    <div><label>작성일자</label><input name="c_date" value="${TIME}" readonly></div>
     <div><label>제목</label><input name="c_title"></div>
     <%-- <textarea name="c_content"></textarea> --%>
     <%-- summernote 추가하기 --%>
-    <div id="summernote" name="c_content"></div>
+    <div id="summernote"></div>
     <div class="btn_save">
         <button class="btn_save" type="button">저장</button>
     </div>
@@ -35,11 +35,13 @@
         $('#summernote').summernote();
     })
 
+    /*
     document.addEventListener("DOMContentLoaded", () => {
         const btn_save = document.querySelector("button.btn_save")
         btn_save.addEventListener("click", () => {
             form.submit()
         })
     })
+    */
 </script>
 </html>

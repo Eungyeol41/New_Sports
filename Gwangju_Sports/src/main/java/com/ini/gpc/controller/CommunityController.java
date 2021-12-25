@@ -28,8 +28,12 @@ public class CommunityController {
     @RequestMapping(value = "/insert", method = RequestMethod.GET)
     public String insert(Model model) {
 
-        LocalDateTime localDate = LocalDateTime.now();
-        log.debug("현재 날짜 및 시간: {}", localDate);
+        DateTimeFormatter dateFormat = DateTimeFormatter
+                .ofPattern("yyyy년 MM월 dd일")
+                .withLocale(Locale.forLanguageTag("ko"));
+
+        String localDate = LocalDateTime.now().format(dateFormat);
+        log.debug("현재 날짜: {}", localDate);
 
         model.addAttribute("TIME", localDate);
 
