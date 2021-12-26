@@ -9,6 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 class CommunityDTO {
+        private String c_name;
         private String c_title;
         private String c_content;
         private String c_date;

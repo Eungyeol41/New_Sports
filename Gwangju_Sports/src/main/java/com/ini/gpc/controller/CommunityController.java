@@ -1,5 +1,6 @@
 package com.ini.gpc.controller;
 
+import com.ini.gpc.service.CommunityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,11 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.time.DayOfWeek;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAdjuster;
-import java.time.temporal.TemporalAdjusters;
 import java.util.Locale;
 
 @Slf4j
@@ -32,10 +30,17 @@ public class CommunityController {
                 .ofPattern("yyyy년 MM월 dd일")
                 .withLocale(Locale.forLanguageTag("ko"));
 
+        DateTimeFormatter timeFormat = DateTimeFormatter
+                .ofPattern("a HH시 mm분")
+                .withLocale(Locale.forLanguageTag("ko"));
+
         String localDate = LocalDateTime.now().format(dateFormat);
         log.debug("현재 날짜: {}", localDate);
+        String localTime = LocalDateTime.now().format(timeFormat);
+        log.debug("현재 시간: {}", localTime);
 
-        model.addAttribute("TIME", localDate);
+        model.addAttribute("DATE", localDate);
+        model.addAttribute("TIME", localTime);
 
         return "community/insert";
     }
