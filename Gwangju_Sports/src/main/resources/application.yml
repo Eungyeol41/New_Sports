@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://kouser:12345@cluster0.wigkd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

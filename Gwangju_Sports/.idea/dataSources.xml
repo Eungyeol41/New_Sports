@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="gwangju_sport" uuid="2928caad-fd95-448f-8956-ad484df6d970">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>광주광역시 체육시설</remarks>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb+srv://cluster0.wigkd.mongodb.net/myFirstDatabase?retryWrites=true&amp;w=majority</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>
