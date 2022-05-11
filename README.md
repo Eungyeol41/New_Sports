@@ -9,6 +9,11 @@
 - 간단한 회원 관련 구현 ( 로그인, 회원가입, 정보 수정, 회원 탈퇴 등 )
 - Q&A ( 문의, 댓글 등의 기능 구현 )
 
+## 구성
+- React(Front) + Spring(Back) + MongoDB(DataBase)
+
+---
+
 # Git Hub
 
 ## 팀원들과의 협업 Git Project
@@ -34,3 +39,6 @@
   - 한 번 위의 코드를 실행해놓으면
     > 다음부터는 git pull로 해도 상관이 없다.
 
+---
+### 작업상황
+https://mpro-mat-5d8.notion.site/4645c949905d461fb649dc4f67f34e85
