@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ini.Main">
+
+    <select id="selectContents" parameterType="EngrbdVO" resultType="EngrbdVO">
+        /* Main_SQL.selectContents */
+    </select>
+
+    <select id="selectList" parameterType="cmmnDefaultVO" resultType="EngrbdVO">
+        /* Main_SQL.selectList */
+    </select>
+
+    <select id="selectCount" parameterType="cmmnDefaultVO" resultType="int">
+        /* Main_SQL.selectCount */
+    </select>
+
+    <insert id="insertContents" parameterType="EngrbdVO">
+        /* Main_SQL.insertContents */
+    </insert>
+
+    <update id="updateContents" parameterType="EngrbdVO">
+        /* Main_SQL.updateContents */
+    </update>
+
+    <update id="deleteContents" parameterType="EngrbdVO">
+        /* Main_SQL.deleteContents */
+    </update>
+
+</mapper>
