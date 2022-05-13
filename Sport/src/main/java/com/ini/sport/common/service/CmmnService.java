@@ -1,4 +1,4 @@
-package com.ini.sport.common;
+package com.ini.sport.common.service;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-</beans>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c] (%M) %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.springframework" level="INFO" additivity="false">
+            <AppenderRef ref="console" />
+            <!-- <AppenderRef ref="rollingFile" /> -->
+        </Logger>
+        <!-- log SQL with timing information, post execution -->
+        <!-- TODO 운영 반영 시 DEBUG > INFO -->
+        <Logger name="com.ini" level="debug" additivity="false">
+            <AppenderRef ref="console" />
+            <!-- <AppenderRef ref="rollingFile" /> -->
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="console" />
+            <!-- <AppenderRef ref="rollingFile" /> -->
+        </Root>
+    </Loggers>
+</Configuration>

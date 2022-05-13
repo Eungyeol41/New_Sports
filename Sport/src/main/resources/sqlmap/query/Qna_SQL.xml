@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.ini.Main">
+<mapper namespace="com.ini.Qna">
 
-    <select id="selectContents" parameterType="EngrbdVO" resultType="EngrbdVO">
+    <select id="selectContents" parameterType="QnaVO" resultType="QnaVO">
         /* Main_SQL.selectContents */
     </select>
 
-    <select id="selectList" parameterType="cmmnDefaultVO" resultType="EngrbdVO">
+    <select id="selectList" parameterType="QnaVO" resultType="QnaVO">
         /* Main_SQL.selectList */
     </select>
 
-    <select id="selectCount" parameterType="cmmnDefaultVO" resultType="int">
+    <select id="selectCount" parameterType="QnaVO" resultType="int">
         /* Main_SQL.selectCount */
     </select>
 
-    <insert id="insertContents" parameterType="EngrbdVO">
+    <insert id="insertContents" parameterType="QnaVO">
         /* Main_SQL.insertContents */
     </insert>
 
-    <update id="updateContents" parameterType="EngrbdVO">
+    <update id="updateContents" parameterType="QnaVO">
         /* Main_SQL.updateContents */
     </update>
 
-    <update id="deleteContents" parameterType="EngrbdVO">
+    <update id="deleteContents" parameterType="QnaVO">
         /* Main_SQL.deleteContents */
     </update>
 
