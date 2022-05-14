@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ini.sport.dao.SearchDao">
+
+	<select id="selectAll" resultType="SearchVO">
+		SELECT
+			  SEQ			seq
+		    , FAC_CD		facCd
+			, FAC_NM		facNm
+			, FAC_ADDR		facAddr
+			, FAC_TEL		facTel
+			, FAC_MONEY		facMoney
+			, FAC_SPORT		facSport
+		FROM t_fac_list
+	</select>
+
+	<select id="selectCount" resultType="Integer">
+		SELECT
+			COUNT(*)
+		FROM t_fac_list
+	</select>
+</mapper>
