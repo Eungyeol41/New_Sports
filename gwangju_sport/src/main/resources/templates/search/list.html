@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<section layout:fragment="content">
+	<table class="buyer_list">
+		<thead>
+		<tr>
+			<th>No.</th>
+			<th>시설명</th>
+			<th>주소</th>
+			<th>전화번호</th>
+			<th>이용료</th>
+			<th>종목</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="fac: ${facList}">
+			<td th:text="${fac.seq}"></td>
+			<td th:text="${fac.facNm}"></td>
+			<td th:text="${fac.facAddr}"></td>
+			<td th:text="${fac.facTel}"></td>
+			<td th:text="${fac.facMoney eq 'Y' ? '유료' : '무료'}"></td>
+			<td th:if="${fac.facSport eq '0'}">검도</td>
+			<td th:if="${fac.facSport eq '1'}">게이트볼</td>
+			<td th:if="${fac.facSport eq '2'}">골프</td>
+			<td th:if="${fac.facSport eq '3'}">구기체육관</td>
+			<td th:if="${fac.facSport eq '4'}">국궁</td>
+			<td th:if="${fac.facSport eq '5'}">농구</td>
+			<td th:if="${fac.facSport eq '6'}">배구</td>
+			<td th:if="${fac.facSport eq '7'}">배드민턴</td>
+			<td th:if="${fac.facSport eq '8'}">생활체육관</td>
+			<td th:if="${fac.facSport eq '9'}">수영</td>
+			<td th:if="${fac.facSport eq '10'}">스케이트</td>
+			<td th:if="${fac.facSport eq '11'}">승마</td>
+			<td th:if="${fac.facSport eq '12'}">야구 / 소프트볼</td>
+			<td th:if="${fac.facSport eq '13'}">양궁</td>
+			<td th:if="${fac.facSport eq '14'}">육상</td>
+			<td th:if="${fac.facSport eq '15'}">인공암벽</td>
+			<td th:if="${fac.facSport eq '16'}">인라인스케이트</td>
+			<td th:if="${fac.facSport eq '17'}">정구</td>
+			<td th:if="${fac.facSport eq '18'}">족구</td>
+			<td th:if="${fac.facSport eq '19'}">축구</td>
+			<td th:if="${fac.facSport eq '20'}">테니스</td>
+			<td th:if="${fac.facSport eq '21'}">기타</td>
+		</tr>
+		</tbody>
+	</table>
+	<script>
+		$(function () {
+			$("button.btn_insert").on("click", function () {
+				location.href = "/buyer/insert";
+			})
+		})
+	</script>
+</section>
+</html>
