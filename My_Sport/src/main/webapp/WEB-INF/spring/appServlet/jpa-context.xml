@@ -2,12 +2,18 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
-    <!-- dataSource -->
-    <bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/sport"/>
-        <property name="username" value="spUser"/>
-        <property name="password" value="1234"/>
+    <!-- MySQL - dataSource -->
+<!--    <bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource">-->
+<!--        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://127.0.0.1:3306/sport"/>-->
+<!--        <property name="username" value="spUser"/>-->
+<!--        <property name="password" value="1234"/>-->
+<!--    </bean>-->
+    <bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+        <property name="url" value="jdbc:oracle:thin:@172.30.1.2:1521:XE" />
+        <property name="username" value="kouser" />
+        <property name="password" value="12345" />
     </bean>
 
     <tx:annotation-driven />
@@ -18,7 +24,7 @@
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="ds" />
-        <property name="packagesToScan" value="com.ini.sport.*.model" />
+        <property name="packagesToScan" value="com.ini.sport.model" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
         </property>
