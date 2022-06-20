@@ -3,33 +3,31 @@
 <mapper namespace="com.ini.sport.dao.SearchDao">
 	<select id="selectAll" resultType="SearchVO">
 		/* Qna_SQL.selectAll */
-		SELECT
-			  SEQ								seq
-			, TO_CHAR(RGST_DT, 'YYYY.MM.DD')	rgstDt
-		    , RGST_ID							rgstId
-			, TO_CHAR(RVSE_DT, 'YYYY.MM.DD')	rvseDt
-		    , RVSE_ID							rvseId
-		    , Q_ID								qId
-			, Q_TITLE_NM						qTitleNm
-			, Q_CTT								qCtt
-			, Q_NTC_YN							qNtcYn
-			, Q_CLK_CNT							qClkCnt
+		SELECT SEQ									seq
+			 , DATE_FORMAT(RGST_DT, 'YYYY.MM.DD')	rgstDt
+		     , RGST_ID								rgstId
+			 , DATE_FORMAT(RVSE_DT, 'YYYY.MM.DD')	rvseDt
+		     , RVSE_ID								rvseId
+		     , Q_ID									qId
+			 , Q_TITLE_NM							qTitleNm
+			 , Q_CTT								qCtt
+			 , Q_NTC_YN								qNtcYn
+			 , Q_CLK_CNT							qClkCnt
 		FROM T_QNA
 	</select>
 
 	<select id="selectContents" resultType="SearchVO">
 		/* Qna_SQL.selectContents */
-		SELECT
-			  SEQ								seq
-			, TO_CHAR(RGST_DT, 'YYYY.MM.DD')	rgstDt
-		    , RGST_ID							rgstId
-			, TO_CHAR(RVSE_DT, 'YYYY.MM.DD')	rvseDt
-		    , RVSE_ID							rvseId
-		    , Q_ID								qId
-			, Q_TITLE_NM						qTitleNm
-			, Q_CTT								qCtt
-			, Q_NTC_YN							qNtcYn
-			, Q_CLK_CNT							qClkCnt
+		SELECT SEQ									seq
+			 , DATE_FORMAT(RGST_DT, 'YYYY.MM.DD')	rgstDt
+		     , RGST_ID								rgstId
+			 , DATE_FORMAT(RVSE_DT, 'YYYY.MM.DD')	rvseDt
+		     , RVSE_ID								rvseId
+		     , Q_ID									qId
+			 , Q_TITLE_NM							qTitleNm
+			 , Q_CTT								qCtt
+			 , Q_NTC_YN								qNtcYn
+			 , Q_CLK_CNT							qClkCnt
 		FROM T_QNA
 		WHERE USE_YN = 'Y'
 			AND USER_ID = #{userId}
@@ -37,32 +35,54 @@
 
 	<select id="selectCount" resultType="Integer">
 		/* Qna_SQL.selectCount */
-		SELECT
-			COUNT(*)
+		SELECT COUNT(*)
 		FROM T_QNA
 		WHERE USE_YN = 'Y'
 	</select>
 
 	<insert id="insertContents" parameterType="SearchVO">
 		/* Qna_SQL.insertContents */
-
+		INSERT INTO T_QNA ( RGST_ID
+						  , Q_ID
+						  , Q_TITLE_NM
+						  , Q_CTT
+						  , Q_NTC_YN
+						  , Q_CLK_CNT
+		)
+		VALUES (  #{rgstId}
+		        , #{qId}
+		        , #{qTitleNm}
+		        , #{qCtt}
+		        , #{qNtcYn}
+		        , 0
+			   )
 	</insert>
 
 	<update id="updateContents" parameterType="SearchVO">
 		/* Qna_SQL.updateContents */
-
+		UPDATE T_QNA SET
+			  RVSE_DT = SYSDATE()
+			, RVSE_ID = #{rvseId}
+			, Q_ID = #{qId}
+			, Q_TITLE_NM = #{qTitleNm}
+			, Q_CTT = #{qCtt}
+			, Q_NTC_YN = #{qNtcYn}
+		WHERE USE_YN = 'Y'
+			AND USER_ID = #{userId}
 	</update>
 
 	<!-- 조회수 증가 SQL -->
 	<update id="updateClkCnt" parameterType="SearchVO">
 		/* Qna_SQL.updateClkCnt */
-
+		UPDATE T_QNA SET
+			Q_CLK_CNT = #{qClkCnt} + 1
+		WHERE USE_YN = 'Y'
+		  AND SEQ = #{seq}
 	</update>
 
 	<delete id="deleteContents">
 		/* Qna_SQL.deleteContents */
-		UPDATE T_QNA
-		SET
+		UPDATE T_QNA SET
 			USE_YN = 'N'
 		WHERE SEQ = #{seq}
 	</delete>
