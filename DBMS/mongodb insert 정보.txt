@@ -1,0 +1,20 @@
+db.getCollection("t_fac_list").insertOne({
+	  _id: new ObjectId("627b5dfa5d341bdcb4a1aa32")
+	, l_fac_addr: "광주광역시 남구 중앙로110번길 36 사직공원"
+	, l_fac_cd: "L004"
+	, l_fac_money: "Y"
+	, l_fac_nm: "관덕정"
+	, l_fac_sport: "4"
+	, l_fac_tel: "062-671-8383"
+	, l_seq: new NumberLong("4")
+})
+
+db.getCollection("t_fac_list").insertOne({
+	  l_fac_addr: "광주광역시 서구 금화로 278"
+	, l_fac_cd: "L005"
+	, l_fac_money: "Y"
+	, l_fac_nm: "광주광역시장애인국민체육센터"
+	, l_fac_sport: "8"
+	, l_fac_tel: "062-600-3900"
+	, l_seq: new NumberLong("5")
+})

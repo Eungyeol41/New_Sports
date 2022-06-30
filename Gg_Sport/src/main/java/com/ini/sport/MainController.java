@@ -18,7 +18,7 @@ public class MainController {
 	@RequestMapping(value = "/home", method = RequestMethod.GET)
 	public String home(Model model) {
 		model.addAttribute("NAME","Hong");
-		return "home";
+		return "main";
 	}
 
 }

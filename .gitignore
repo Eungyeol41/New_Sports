@@ -154,4 +154,5 @@ KakaoSecret.*
 NaverSecret.*
 
 .idea/
+.out/
 out/
